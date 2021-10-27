@@ -1,13 +1,15 @@
 import pygame
 pygame.init()
-screen=pygame.display.set_mode((700,500))
-pygame.display.set_caption('Game')
+width = 700
+height = 500
 background_color = (192,192,192)
 text_color = (255,255,255)
 background_1 = 0
 background_2 = 0
 air_1 = -10
 air_2 = 100
+pygame.display.set_caption('Game')
+screen=pygame.display.set_mode((width, height))
 font = pygame.font.SysFont('javanesetext', 20)
 background = pygame.image.load("9.jpg")
 air = pygame.image.load("1.png")
