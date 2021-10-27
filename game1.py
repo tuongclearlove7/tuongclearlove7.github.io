@@ -1,7 +1,5 @@
 from time import sleep
-import pygame, sys
-from pygame.locals import *
-pygame.init()
+
 Clearlove = '''┌─────────────────────────────────────────────┐
 │          Invite you to play my game         │
 ├─────────────────────────────────────────────┤
@@ -14,8 +12,17 @@ for c in Clearlove:
     print(c, end="", flush=True)
     sleep(0.01)
 print()
-a = input('Bấm enter để chơi game')
-
+input('Bấm enter để chơi game')
+print("game đang khởi động vui lòng hãy chờ 1 vài giây")
+sleep(1)
+cowndown = range(10,110, +10)
+for i in range(len(cowndown)):
+    print("                       Loading...: ",cowndown[i], end = "")
+    print("%")
+    sleep(0.5) #Tốc độ loading khi bắt đầu xử lý loading 10 -> 100%    
+import pygame, sys
+from pygame.locals import *
+pygame.init()
 background_1 = 0
 background_2 = 0
 Width = 1000
