@@ -1,4 +1,4 @@
-import pygame
+import pygame, sys
 from pygame.locals import *
 pygame.init()
 background_1 = 0
@@ -25,7 +25,7 @@ class my_plane():
 
     def draw(self): # Hàm dùng để vẽ máy bay
         screen.blit(self.Surface, (self.Fly, 150))# top, below
-    
+    # Vị trí của máy bay
     
     def update(self, Fly_left, Fly_right): 
     # Hàm dùng để thay đổi vị trí máy bay
@@ -39,8 +39,6 @@ class my_plane():
             self.Fly = Height - 700 
             # vị trí bắt đầu bay của máy bay
 
-        if self.Fly < 1:
-            self.Fly = 1 
 plane = my_plane()
 Fly_left = False
 Fly_right = False
@@ -54,7 +52,7 @@ while True: #vòng lặp
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
-            
+            sys.exit()
        
         if event.type == KEYDOWN:
             if event.key == K_LEFT:
