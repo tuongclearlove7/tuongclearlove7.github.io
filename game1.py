@@ -1,6 +1,21 @@
+from time import sleep
 import pygame, sys
 from pygame.locals import *
 pygame.init()
+Clearlove = '''┌─────────────────────────────────────────────┐
+│          Invite you to play my game         │
+├─────────────────────────────────────────────┤
+│            [+] Publish 27/10/2021           │
+│            [+] By Clearlove7                │
+├─────────────────────────────────────────────┤
+│                 Game : Plane                │
+└─────────────────────────────────────────────┘'''
+for c in Clearlove:
+    print(c, end="", flush=True)
+    sleep(0.01)
+print()
+a = input('Bấm enter để chơi game')
+
 background_1 = 0
 background_2 = 0
 Width = 1000
