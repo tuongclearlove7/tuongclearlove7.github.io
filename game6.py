@@ -151,6 +151,8 @@ cloud3_1 = 350
 cloud3_2 = 250
 sun_1 = 100
 sun_2 = 150
+moon_1 = 1200
+moon_2 = 100
 station_1 = 1050
 station_2 = 630
 rada_1 = 950
@@ -254,6 +256,7 @@ cloud_image = pygame.image.load("cloud.png")
 cloud2_image = pygame.image.load("cloud.png")
 cloud3_image = pygame.image.load("cloud.png")
 sun_image = pygame.image.load("sunny.png")
+moon_image = pygame.image.load("moon.png")
 station_image = pygame.image.load("launch.png")
 rada_image = pygame.image.load("rada.png")
 satellite_image = pygame.image.load("satellite.png")
@@ -474,6 +477,8 @@ def cloud2(x ,y):
 
 def sun(x, y):
     screen.blit(sun_image, (x, y))
+def moon(x, y):
+    screen.blit(moon_image, (x, y))
 
 def station(x, y):
     screen.blit(station_image, (x, y))
@@ -573,6 +578,9 @@ while tuong: # vòng lặp
     sun_1 += 0.1
     if sun_1 + 0 > Width:
             sun_1 = Height - 700
+    moon_1 -= 0.1
+    if moon_1 + 0 > Width:
+            moon_1 = Height - 700
     cloud_1 += 0.3
     if cloud_1 + 0 > Width:
             cloud_1 = Height - 700
@@ -582,6 +590,12 @@ while tuong: # vòng lặp
     cloud3_1 += 0.3
     if cloud3_1 + 0 > Width:
             cloud3_1 = Height - 700
+    vetinh_1 -= 0.3
+    if vetinh_1 + 0 > Width:
+            vetinh_1 = Height - 700
+    vetinh2_1 -= 0.3
+    if vetinh2_1 + 0 > Width:
+            vetinh2_1 = Height - 700
 
     launch(launch_1, launch_2)# cho tên lửa vô game
     ufo(ufo_1, ufo_2)
@@ -661,6 +675,7 @@ while tuong: # vòng lặp
     cloud2(cloud3_1, cloud3_2)
 
     sun(sun_1, sun_2)
+    moon(moon_1, moon_2)
     station(station_1, station_2)
     rada(rada_1, rada_2)
     satellite(satellite_1, satellite_2)
