@@ -48,39 +48,48 @@ async function companyAPI() {
                 console.log("error");
         });
 
-        console.log(data);
+        try{
 
-        let element = document.querySelector(".apply-company");
-        let companyNames = "";
+                console.log(data);
 
-        for (let i = 0; i < data.length; i++) {
-            companyNames += `        
+                let element = document.querySelector(".apply-company");
+                let companyNames = "";
+
+                for (let i = 0; i < data.length; i++) {
+                companyNames += `        
                 <tr>
-                   <td>${data[i].ten_cong_ty}</td>
-                   <td>${data[i].linh_vuc}</td>
-                   <td>${data[i].sdt}</td>
-                   <td>${data[i].email}</td>
-                   <td>${data[i].dia_chi}</td>
-                   <td>${data[i].vi_tri_tuyendung}</td>
-                   <td>${data[i].luong}</td>
+                <td>${data[i].ten_cong_ty}</td>
+                <td>${data[i].linh_vuc}</td>
+                <td>${data[i].sdt}</td>
+                <td>${data[i].email}</td>
+                <td>${data[i].dia_chi}</td>
+                <td>${data[i].vi_tri_tuyendung}</td>
+                <td>${data[i].luong}</td>
                 </tr>`;
+                }
+
+                return element.innerHTML = `
+                <div class=".table-responsive">
+                <table>
+                <tr>
+                <th>Tên công ty</th>
+                <th>Lĩnh vực</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Địa chỉ</th>
+                <th>Vị trí tuyển dụng</th>
+                <th>Lương</th>
+                </tr>${companyNames}
+                </table>
+                </div>
+        `;
+
+        }catch (error) {
+
+                console.log(error);
         }
 
-        return element.innerHTML = `
-        <div class=".table-responsive">
-           <table>
-               <tr>
-                   <th>Tên công ty</th>
-                   <th>Lĩnh vực</th>
-                   <th>Số điện thoại</th>
-                   <th>Email</th>
-                   <th>Địa chỉ</th>
-                   <th>Vị trí tuyển dụng</th>
-                   <th>Lương</th>
-                </tr>${companyNames}
-            </table>
-        </div>
-      `;
+        
 
 }
 
