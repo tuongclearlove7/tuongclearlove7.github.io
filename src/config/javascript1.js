@@ -47,11 +47,9 @@ async function companyAPI() {
 
                 console.log("error");
         });
+        
 
         try{
-
-                console.log(data);
-
                 let element = document.querySelector(".apply-company");
                 let companyNames = "";
 
@@ -84,9 +82,9 @@ async function companyAPI() {
                 </div>
         `;
 
-        }catch (error) {
+        }catch{
 
-                console.log(error);
+                console.warn("không tìm thấy tên của class!!!");
         }
 
         
@@ -115,36 +113,7 @@ window.addEventListener("scroll", function () {
                 });
         }
 
-        if (scroll > 700) {
-
-                App.setStyleByTagName('.img-block', {
-                        opacity: '0.5',
-                        transition: 'all 1s ease',
-
-                });
-
-                App.setStyleByTagName('.language-programming', {
-                        transition: 'all 1s ease',
-                        //animation:'moveBottom 2s',
-                        position: 'relative',
-                });
-                App.setStyleByTagName('.language-programming', {
-                        opacity: '1',
-                        transition: 'all 1s ease',
-                });
-        }
-        else {
-
-                App.setStyleByTagName('.language-programming', {
-
-                        transition: 'all 1s ease',
-
-                });
-                App.setStyleByTagName('.img-block', {
-                        opacity: '1',
-
-                });
-        }
+     
 
 
 })

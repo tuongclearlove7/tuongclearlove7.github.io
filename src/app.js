@@ -28,14 +28,11 @@ class App {
         }
 
         setStyleByTagName = (tagName, styleConfig) => {
-                try {
-                        for (let configName in styleConfig) {
-                                this.getTagName(tagName).style[configName] = styleConfig[configName];
-                            }
-                        return styleConfig;
-                }catch{
-                        console.log("Set style error");
-                }
+               
+                for (let configName in styleConfig) {
+                        this.getTagName(tagName).style[configName] = styleConfig[configName];
+                    }
+                return styleConfig;
               
         }
 
