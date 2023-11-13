@@ -71,20 +71,9 @@ export default function Home(){
                                         color: '#F4511E',
                                     }),
                                 
-                                    App.setElement('p').setInnerBotToTime(5,
+                                    App.setElement('p').setInnerBotToTime(15,
                                                         
-                                        `I am a software technology major at Duy Tan University, I discovered my
-                                        passion for programming with PHP. To further enhance my skills, I
-                                        enrolled in a web programming course with PHP & MySQL at the iViettech
-                                        programming training center. Throughout my studies, I had the
-                                        opportunity to participate in real projects that not only helped me gain
-                                        practical experience but also allowed me to improve my skills.
-                                        I am passionate about becoming a skilled PHP programmer and I am
-                                        willing to learn as much as possible to fulfill my duties. I'm looking
-                                        forward to joining your company as an intern in PHP. I am committed to
-                                        continuous learning, acquiring new skills, and gaining additional
-                                        experience to contribute to the growth and development of the company.
-                                        `
+                                        `I am a software technology major at Duy Tan University, I discovered my passion for programming with PHP. To further enhance my skills, I enrolled in a web programming course with PHP & MySQL at the iViettech programming training center. Throughout my studies, I had the opportunity to participate in real projects that not only helped me gain practical experience but also allowed me to improve my skills. I am passionate about becoming a skilled PHP programmer and I am willing to learn as much as possible to fulfill my duties. I'm looking forward to joining your company as an intern in PHP. I am committed to continuous learning, acquiring new skills, and gaining additional experience to contribute to the growth and development of the company.`
                                     ),
 
                                     App.setElement('p').setStyle({

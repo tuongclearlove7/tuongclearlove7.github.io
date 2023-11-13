@@ -203,12 +203,12 @@ export default function setElement(elementName) {
 
             console.log(text);
 
-            document.addEventListener('click', () => {
+            responsiveVoice.speak(text, "UK English Female");
 
-                responsiveVoice.speak(text, "Australian Female");
-                
-            }, { once: true });
+            // document.addEventListener('DOMContentLoaded', () => {     
+            // }, { once: true });
         }
+    
     
         result.setInner = function(...childs){
     
