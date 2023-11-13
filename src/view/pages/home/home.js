@@ -68,10 +68,10 @@ export default function Home(){
                                         `OBJECTIVE`
                                     
                                     ).setStyle({
-                                        color: 'aqua',
+                                        color: '#F4511E',
                                     }),
                                 
-                                    App.setElement('p').setInner(
+                                    App.setElement('p').setInnerBotToTime(5,
                                                         
                                         `I am a software technology major at Duy Tan University, I discovered my
                                         passion for programming with PHP. To further enhance my skills, I
@@ -85,7 +85,9 @@ export default function Home(){
                                         continuous learning, acquiring new skills, and gaining additional
                                         experience to contribute to the growth and development of the company.
                                         `
-                                    ).setStyle({
+                                    ),
+
+                                    App.setElement('p').setStyle({
                                         marginBottom:"30px",
                                     }),
     

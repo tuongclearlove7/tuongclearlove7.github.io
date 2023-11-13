@@ -84,7 +84,7 @@ async function companyAPI() {
 
         }catch{
 
-                console.warn("không tìm thấy tên của class!!!");
+                console.error("không tìm thấy tên của class!!!");
         }
 
         

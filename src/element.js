@@ -173,6 +173,30 @@ export default function setElement(elementName) {
                 return result;
         };
 
+
+        result.setInnerBotToTime = function(time, ...childs) {
+
+            let message = childs[0];
+
+            speakText(message);
+
+            function renderText() {
+
+                if (i < message.length) {
+
+                    result.textContent += message[i];
+
+                    setTimeout(renderText, time);
+                    
+                    i++;
+                }
+            }
+          
+            renderText();
+          
+            return result;
+    };
+
         
               
         function speakText(text) {
