@@ -201,7 +201,6 @@ export default function setElement(elementName) {
               
         function speakText(text) {
 
-            console.log(text);
 
             responsiveVoice.speak(text, "UK English Female");
 
